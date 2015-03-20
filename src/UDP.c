@@ -17,7 +17,7 @@ int main(void){
 	servAddr.sin_port = htonl(server_port);
 	servAddr.sin_addr.s_addr = htonl(INADDR_ANY);
 	//create socket
-	if((PF_INET,SOCK_DGRAM,0)< 0);
+	if((PF_INET,SOCK_DGRAM,0)< 0)
 	{
 		perror("ERROR:socket failed!");
 		exit(1);
@@ -30,11 +30,9 @@ int main(void){
 	for(;;)  // Run forever
 	{
 		//Recieve String
-
-
 		len = recvfrom(s, buffer,sizeof(buffer),0,(struct sockaddr*)&clntAddr,(socklen_t*)&clntAddrLen);
-		sendto(s,buffer,len,0,(struct sockAddr*)&clntAddr,sizeof(clntAddr));
 		//send String
+		sendto(s,buffer,len,0,(struct sockAddr*)&clntAddr,sizeof(clntAddr));
 
 	}//End of for loop
 }//End of echo server program

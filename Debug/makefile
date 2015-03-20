@@ -44,7 +44,7 @@ all: UDP
 UDP: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: MacOS X C++ Linker'
-	g++ -L/usr/include -o "UDP" $(OBJS) $(USER_OBJS) $(LIBS)
+	g++  -o "UDP" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 

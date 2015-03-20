@@ -4,15 +4,12 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../src/Client.c \
 ../src/UDP.c 
 
 OBJS += \
-./src/Client.o \
 ./src/UDP.o 
 
 C_DEPS += \
-./src/Client.d \
 ./src/UDP.d 
 
 
