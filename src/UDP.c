@@ -30,10 +30,10 @@ int main(void){
 	for(;;)  // Run forever
 	{
 		//Recieve String
-		sendto(s,buffer,len,0,(struct sockAddr*)&clntAddr, sizeof(clntAddr));
-		sendto(s,buffer,len,0,(struct sockAddr*)&clntAddr,sizeof(clntAddr));
-		len = recvfrom(s, buffer,sizeof(buffer),0,(struct sockaddr*)&clntAddr,(socklen_t*)&clntAddrLen);
 
+
+		len = recvfrom(s, buffer,sizeof(buffer),0,(struct sockaddr*)&clntAddr,(socklen_t*)&clntAddrLen);
+		sendto(s,buffer,len,0,(struct sockAddr*)&clntAddr,sizeof(clntAddr));
 		//send String
 
 	}//End of for loop

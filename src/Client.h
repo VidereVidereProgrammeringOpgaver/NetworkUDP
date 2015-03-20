@@ -20,10 +20,6 @@
 #include <string.h>
 #include <arpa/inet.h>
 #include <sys/wait.h>
-class Client {
-public:
-	Client();
-	virtual ~Client();
-};
+
 
 #endif /* CLIENT_H_ */
