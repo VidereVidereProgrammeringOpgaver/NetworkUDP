@@ -15,7 +15,7 @@ int main (int argc, char*argv[])
 	char* string;				//String to be echoed
 	char buffer[256+1];			//Data buffer
 	struct sockaddr_inAddr;		//Server socket address
-
+	struct sockaddr_in servAddr;
 	// Check and set program arguments
 	if(argc !=3)
 	{
@@ -30,7 +30,7 @@ int main (int argc, char*argv[])
 	memset (&servAddr, 0, sizeof (servAddr));
 	servAddr.sin_family = AF_INET;
 	inet_pton (AF_INET, servName, &servAddr.sin_addr);
-	servAdd.sin_port=htons(servPort);
+	servAddr.sin_port=htons(servPort);
 
 	//create socket
 	if ((s = socket (PF_INET, SOCK_DGRAM, 0) < 0)) {
@@ -49,7 +49,7 @@ int main (int argc, char*argv[])
 	fputs (buffer, stdout);
 
 	//Close the socket
-	close(s);s
+	close(s);
 
 	//Stop the program
 	exit(0);
